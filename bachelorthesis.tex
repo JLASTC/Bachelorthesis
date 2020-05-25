@@ -1,0 +1,97 @@
+% !TeX spellcheck = en_US
+\documentclass[supercite]{HustGraduPaper}
+%进行个人信息设置
+\title{基于冷原子系统模拟真空双折射} %论文题目
+\author{廖吉恺} %作者姓名
+\date{\today} %日期，默认当日
+\school{物理学院} %院系名称
+\classnum{物理1601} %专业班级
+\stunum {U2016XXXXX} %学号
+\instructor{胡忠坤} %指导教师姓名
+\usepackage{amsmath}
+\usepackage{slashed}
+%添加自己要用的其他宏包
+\usepackage{xltxtra}
+\usepackage{bm}
+
+\begin{document}
+	%生成标题页 \maketitle[可选参数]
+	%可选参数：
+	%logo color=green/black 华中科技大学字样的颜色，绿色或者黑色，默认绿色
+	%line length=12em 填写信息处横线的长度，默认12em
+	%line font=huawenzhongsong 填写信息的字体，默认huawenzhongsong
+	\maketitle
+	
+	%生成声明与授权书页 \statement[可选参数]
+	%可选参数：
+	%confidentiality=yes/no/true/false/empty 是否保密，yes/true为保密；no/false为不保密，empty为不填，默认为empty
+	%year=5 保密年数，默认为空
+	\statement[confidentiality=no]
+	
+	\clearpage %结束上一页
+	\pagenumbering{Roman} %摘要页码为大写罗马数字
+	
+	%填写中文摘要内容和关键字
+	\begin{cnabstract}{量子模拟；真空双折射；正负电子对；光子自能；格点规范场}
+		基于冷原子光晶格平台量子模拟是近来物理研究的一大热点，已广泛涉及到原子与光物理、凝聚态物理、高能物理等各个研究方向。在高能物理上也尤为突出，它有望解决量子色动力学中夸克禁闭等强作用多体稳定性问题，阐释量子场论中格点正规化的物理图像，并且具有高灵活低成本的优点。
+		
+		本文主要论述了真空双折射量子模拟的必要性、合法性和可行性，本文所做工作是模拟真空双折射的关键一步。在导论中我们介绍了高能物理发展状况，包括对格点场论的研究倾向，迫切解决量子色动力学的强作用和重整化发散等问题。我们回顾了近来量子模拟在各个领域的发展，在高能上还未有真空双折射这种有光子自能修正的模拟理论。
+		
+		在超冷原子部分，我们介绍了二能级系统、缀饰态、拉曼过程、自发辐射、光场量子化、多普勒冷却、光晶格系统。我们深入研究了希尔伯特空间的截断方法，首次以双势阱光晶格为例，剖析了它丰富的准粒子激发，这为模拟正负电子过程奠定基础。
+		
+		在高能量子电动力学物理过程中，正负电子部分，我们提出了在坐标空间鉴别正负电子态的标准，我们考虑了非相对论近似静电磁场下的电子哈密顿量，与实验观测到的物理现象吻合。以此鉴别标准我们讨论了含时光场下的正负电子物理过程。最后将狄拉克旋量方程扩展到拓扑材料上的发现。在真空双折射部分，本文借鉴前人对真空双折射场论上的工作，从哈密顿的角度对其做了一些新的物理诠释，确定了磁场对真空双折射的重要作用。本文提出了一个二维朗道光折射模型，简化了光与正负电子的自由度，用两个物理环境模拟光子两种偏振，引入佩尔斯规范相位，从而推导出真空双折射格点化哈密顿量，以便于光晶格模拟。
+		
+		最后在量子模拟部分，我们介绍了实验制备阿贝尔规范场的方法，主要有旋转人工规范势、拉曼人工规范势以及量子链模型三种方法。然后我们构造了双势阱光晶格，分析了希尔伯特空间截断之后的基矢，列出了真空态、光子态、正负电子态所满足的哈密顿量，也简单介绍了计算模拟的结果。本文的最后，提出真空双折射模拟方案，并简要讨论该模拟有待改进之处。
+	\end{cnabstract}
+	%填写英文摘要内容和关键字
+	\begin{enabstract}{Quantum stimulation; Vacuum birefringence; Electron and positron pairs; Photon self-energy; Lattice field theory}
+		Quantum simulation based on ultracold atom optical lattice platform is a hot spot in recent physics research, which has been widely involved in various research directions such as atomic, molecular, and optical physics, condensed matter physics, high-energy physics. It is particularly prominent in high-energy physics. It is expected to solve the problem of many-body stability such as quark confinement in quantum chromodynamics, to explain the physical image of lattice regularization in quantum field theory, and has the advantages of high flexibility and low cost.
+
+		This paper mainly discusses the necessity, legitimacy and feasibility of vacuum birefringence quantum simulation. The work done in this paper is a key step in simulating vacuum birefringence. In the introduction, we introduce the development of high-energy physics, including the research tendency of lattice field theory, in order to urgently solve the problems of the strong interaction in quantum chromodynamics and the renormalization divergence. We review the recent development of quantum simulation in various fields. In high energy physics, there was no vacuum birefringence simulation theory with photon self-energy correction.
+
+		In the ultracold atom section, we introduce two-level systems, decorated states, Raman processes, spontaneous emission, electromagnetic field quantization, Doppler cooling, and optical lattice systems. We have deeply studied the truncation method of Hilbert space. For the first time, taking the double-well optical lattice as an example, we analyze its rich quasi-particle excitation, which lays the foundation for simulating the dynamics of electron and positron.
+
+		In the process of high-energy quantum electrodynamics, in the part of electron and positron, we propose a standard for identifying electron and positron states in the coordinate space. We consider the non-relativity approximation of the electron Hamiltonian under static electromagnetic field, which agrees with the physical phenomena observed in experiments. Based on this identification criterion, we discuss the physical dynamics of electron and positron in the time-dependent electromagnetic field. Finally, the Dirac spinor field equation is extended to the discovery on topological materials. In the part of vacuum birefringence, this paper draws on previous work on vacuum birefringence expressed by quantum field theory and makes some new physical interpretations from the perspective of Hamiltonian to determine the important role of magnetic field on vacuum birefringence. In this paper, a two-dimensional Landau light refraction model is proposed, which simplifies the degrees of freedom of light and positrons and electrons. The two physical environments are used to simulate the two polarizations of photons. We introduce the Peierls substitution to derive the vacuum birefringence latticed Hamiltonian, in order to facilitate the simulation on optical lattice.
+		
+		Finally, in the quantum simulation part, we introduce the experimental preparation of the Abel U(1) gauge field. There are three main methods, rotation artificial gauge potential, Raman artificial gauge potential and quantum link model. Then we construct a double-well optical lattice, analyze the basis vector after truncation in Hilbert space, list the Hamiltonian satisfied by the vacuum state, photon state, and positron and electron states, and also briefly introduce the result of calculation simulation. At the end of this article, a vacuum birefringence simulation scheme is proposed, and we give some in-depth discussion on the simulation. 
+	\end{enabstract}
+	
+	%生成目录 \tableofcontents[可选参数]
+	%可选参数：
+	%pagenum=yes/no/true/false 目录是否显示页码，默认为false
+	%toc in toc=yes/no/true/false 目录中是否有目录及其页码，默认为false
+	%level=4 目录级数，默认是4，即显示到subsubsubsection
+	%section indent=0em 目录第一级的缩进，默认是0em
+	%subsection indent=1.5em 目录第二级的缩进，默认是1.5em
+	%subsubsection indent=3.8em 目录第三级的缩进，默认是3.8em
+	%subsubsubsection indent=7em 目录第四级的缩进，默认是7em
+	%paragraph indent=11em 目录第五级的缩进，默认是11em
+	%subparagraph indent=13em 目录第六级的缩进，默认13em
+	%indent=normal/noindent/hustnoindent/sameforsubandsubsub 快速缩进设置，具体见文档
+	%dot sep=4.5 目录点间距，默认4.5
+	%section dot sep=4.5 目录第一级的点间距，默认是4.5
+	%subsection dot sep=4.5 目录第二级的点间距，默认是4.5
+	%subsubsection dot sep=4.5 目录第三级的点间距，默认是4.5
+	%subsubsubsection dot sep=4.5 目录第四级的点间距，默认是4.5
+	%paragraph dot sep=4.5 目录第五级的点间距，默认是4.5
+	%subparagraph dot sep=4.6 目录第六级的点间距，默认是4.5
+	%请注意在合适的位置放置\pagenumbering{numstyle}使用新的页码
+	\tableofcontents
+	\clearpage%结束上一页
+	\pagenumbering{arabic} %正文页码为阿拉伯数字
+	
+	%正文内容从这里开始
+	\section{导论}
+	\section{内容}
+	\section{结论与展望}
+	\section{致谢}
+
+	%生成参考文献
+	%使用方法：\bibliography{参考文件1文件名, 参考文献2文件名, ...}
+	\bibliography{Bibs/ultracoldatomSHEP}
+    \begin{appendices}
+    	\section{附录}
+    	
+    \end{appendices}
+
+\end{document}
